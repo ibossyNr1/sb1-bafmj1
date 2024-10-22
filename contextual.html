@@ -1,0 +1,131 @@
+<div class="contextual-page">
+    <h1 class="mb-4">Define Your Business Fundamentals</h1>
+    <p class="lead mb-5">Provide essential information about your business to help the AI understand your context and goals.</p>
+    
+    <form id="contextualForm">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2 class="h5 mb-0">Project Details</h2>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="projectName" class="form-label">Project Name</label>
+                    <input type="text" class="form-control" id="projectName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="companyName" class="form-label">Company Name</label>
+                    <input type="text" class="form-control" id="companyName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="industry" class="form-label">Industry</label>
+                    <select class="form-select" id="industry" required>
+                        <option value="">Select an industry</option>
+                        <option value="technology">Technology</option>
+                        <option value="finance">Finance</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="retail">Retail</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2 class="h5 mb-0">Competition Analysis</h2>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="competitors" class="form-label">List Your Main Competitors</label>
+                    <textarea class="form-control" id="competitors" rows="3" placeholder="Enter one competitor per line"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="competitionFile" class="form-label">Upload Competition Analysis Document</label>
+                    <input type="file" class="form-control" id="competitionFile">
+                    <div class="form-text">Upload documents in PDF or DOCX format (max 10MB)</div>
+                </div>
+                <div class="mb-3">
+                    <label for="competitionNotes" class="form-label">Additional Notes on Competition</label>
+                    <textarea class="form-control" id="competitionNotes" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2 class="h5 mb-0">Positioning</h2>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="missionStatement" class="form-label">Mission Statement</label>
+                    <textarea class="form-control" id="missionStatement" rows="3" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="valueProposition" class="form-label">Value Proposition</label>
+                    <textarea class="form-control" id="valueProposition" rows="3" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Brand Attributes</label>
+                    <div class="row">
+                        <div class="col-md-4 mb-2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="innovative">
+                                <label class="form-check-label" for="innovative">Innovative</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="reliable">
+                                <label class="form-check-label" for="reliable">Reliable</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="sustainable">
+                                <label class="form-check-label" for="sustainable">Sustainable</label>
+                            </div>
+                        </div>
+                        <!-- Add more brand attributes as needed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2 class="h5 mb-0">Customer Behavior</h2>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="demographics" class="form-label">Target Demographics</label>
+                    <textarea class="form-control" id="demographics" rows="3" placeholder="Describe your target audience (age, gender, location, etc.)"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="customerPersonas" class="form-label">Customer Personas</label>
+                    <textarea class="form-control" id="customerPersonas" rows="3" placeholder="Describe 2-3 typical customer personas"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="painPoints" class="form-label">Customer Pain Points</label>
+                    <textarea class="form-control" id="painPoints" rows="3" placeholder="List the main problems your customers face"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between mt-4">
+            <button type="button" class="btn btn-secondary" id="saveContextual">Save Progress</button>
+            <button type="submit" class="btn btn-primary">Save and Continue</button>
+        </div>
+    </form>
+
+    <div class="mt-4">
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
+        </div>
+        <p class="text-muted mt-2">Progress: 2 of 5 sections completed</p>
+    </div>
+
+    <div class="mt-4">
+        <h3>Need Help?</h3>
+        <p>Check out our <a href="#" class="text-primary">guide on defining business context</a> or <a href="#" class="text-primary">contact support</a>.</p>
+    </div>
+</div>

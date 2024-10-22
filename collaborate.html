@@ -1,0 +1,101 @@
+<div class="collaborate-page">
+    <h1 class="mb-4">Collaborate with Your Team</h1>
+    <p class="lead mb-5">Connect with colleagues, identify business challenges, and share AI agents to boost productivity.</p>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2 class="h5 mb-0">LinkedIn Integration</h2>
+        </div>
+        <div class="card-body">
+            <p>Connect with LinkedIn to identify colleagues and their business challenges based on their titles.</p>
+            <button id="linkedinConnect" class="btn btn-primary">
+                <i class="fab fa-linkedin"></i> Connect with LinkedIn
+            </button>
+            <p class="mt-3 small text-muted">
+                By connecting, you allow us to access your LinkedIn connections. We only use this information to help you collaborate more effectively. <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Learn more about our privacy policy</a>.
+            </p>
+        </div>
+    </div>
+
+    <div id="colleagueSection" style="display: none;">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h2 class="h5 mb-0">Your Colleagues</h2>
+                <div class="input-group" style="width: 300px;">
+                    <input type="text" class="form-control" placeholder="Search colleagues" id="colleagueSearch">
+                    <button class="btn btn-outline-secondary" type="button" id="searchButton">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover" id="colleagueTable">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Title</th>
+                                <th>Predicted Challenge</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Colleague rows will be dynamically inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2 class="h5 mb-0">AI Agent Assignment</h2>
+            </div>
+            <div class="card-body">
+                <form id="agentAssignmentForm">
+                    <div class="mb-3">
+                        <label for="selectedColleagues" class="form-label">Selected Colleagues</label>
+                        <select multiple class="form-select" id="selectedColleagues" required>
+                            <!-- Options will be dynamically populated -->
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="selectedAgent" class="form-label">Select AI Agent</label>
+                        <select class="form-select" id="selectedAgent" required>
+                            <option value="">Choose an AI agent</option>
+                            <!-- Options will be dynamically populated -->
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="personalMessage" class="form-label">Personalized Message</label>
+                        <textarea class="form-control" id="personalMessage" rows="3" placeholder="Add a personal note to your invitation"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Invitations</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="privacyModalLabel">Privacy Policy</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>We take your privacy seriously. When you connect your LinkedIn account, we only access the information necessary to help you collaborate with your colleagues. This includes:</p>
+                    <ul>
+                        <li>Names and profile pictures of your connections</li>
+                        <li>Job titles and companies of your connections</li>
+                    </ul>
+                    <p>We do not store this information permanently, and we do not share it with any third parties. The data is used solely to populate your colleague list and suggest relevant AI agents based on job titles.</p>
+                    <p>You can disconnect your LinkedIn account at any time, which will remove all associated data from our system.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
